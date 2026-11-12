@@ -59,9 +59,9 @@ export type ServiceItem = {
 export const COPY = {
   es: {
     meta: {
-      title: "Desarrollo Web y Soporte Técnico",
+      title: "Desarrollo Web Profesional",
       description:
-        "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js. También soporte técnico remoto y presencial en Porlamar, Nueva Esparta.",
+        "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js — tiendas, portafolios y páginas corporativas en Porlamar, Nueva Esparta.",
     },
     nav: {
       servicios: "Servicios",
@@ -77,12 +77,12 @@ export const COPY = {
       close: "Cerrar",
     },
     hero: {
-      badge: "Soporte técnico + Desarrollo web",
+      badge: "Desarrollo web a medida",
       title1: "Tu negocio,",
       title2: "compilado",
       title3: "para crecer.",
       subtitle:
-        "Diseñamos y desarrollamos sitios web modernos, rápidos y bilingües con Next.js — y cuidamos tus equipos con soporte técnico honesto. Porlamar, Nueva Esparta.",
+        "Diseñamos y desarrollamos sitios web modernos, rápidos y bilingües con Next.js: tiendas, portafolios y páginas que convierten. Porlamar, Nueva Esparta.",
       ctaPrimary: "Cotizar mi web",
       ctaSecondary: "Ver el portafolio",
       terminalTitle: "nsat — instalador",
@@ -97,9 +97,9 @@ export const COPY = {
     marquee: { label: "Construido con" },
     services: {
       kicker: "// servicios",
-      title: "Todo lo que tu tecnología necesita",
+      title: "Todo lo que tu web necesita",
       subtitle:
-        "Desde una reparación puntual hasta el sitio web de tu empresa. Cada trabajo empieza con un diagnóstico claro y una cotización sin sorpresas.",
+        "Desde la primera idea hasta el sitio en línea. Cada proyecto empieza con un alcance claro y una cotización sin sorpresas.",
       items: [
         {
           icon: "globe",
@@ -107,11 +107,11 @@ export const COPY = {
           text: "Sitios modernos en Next.js y WordPress: tiendas, portafolios, páginas corporativas e integraciones a medida.",
           link: { label: "Ver detalles", href: "https://nsatcomputers.infinityfreeapp.com/desarrollo-web/" },
         },
-        { icon: "wrench", title: "Soporte técnico", text: "Diagnóstico remoto y presencial para equipos de escritorio, laptops, impresoras y periféricos." },
-        { icon: "shield", title: "Mantenimiento PYMES", text: "Planes periódicos, respaldos y acompañamiento para que tu operación nunca se detenga." },
-        { icon: "cpu", title: "Componentes PC", text: "Procesadores, SSD, memorias, gráficas y periféricos con asesoría de compatibilidad." },
-        { icon: "network", title: "Redes", text: "Configuración de redes locales, Wi-Fi, routers y recursos compartidos para tu oficina." },
-        { icon: "spark", title: "Automatización", text: "Formularios, reservas, pagos y paneles que conectan tu web con tus procesos internos." },
+        { icon: "cart", title: "Tiendas online", text: "E-commerce con catálogo, carrito, pagos y envíos, listo para vender desde el primer día." },
+        { icon: "search", title: "SEO y rendimiento", text: "Velocidad, posicionamiento técnico y datos estructurados para que te encuentren en Google." },
+        { icon: "cpu", title: "Aplicaciones a medida", text: "Portales y paneles con bases de datos, usuarios y accesos seguros para tu operación." },
+        { icon: "shield", title: "Mantenimiento web", text: "Actualizaciones, respaldos y mejoras periódicas para que tu sitio nunca caiga." },
+        { icon: "spark", title: "Automatización", text: "Formularios, pagos y flujos automáticos que conectan tu web con tus procesos internos." },
       ] as ServiceItem[],
       credit: "Fotos: Pixabay",
     },
@@ -128,12 +128,12 @@ export const COPY = {
     },
     why: {
       kicker: "// por qué nsat",
-      title: "Trabajo técnico con explicaciones claras",
-      subtitle: "Creemos que un buen trabajo no termina cuando el equipo enciende: termina cuando entiendes qué pasó.",
+      title: "Trabajo claro, sin tecnicismos",
+      subtitle: "Creemos que un buen trabajo no termina cuando el sitio se publica: termina cuando entiendes cómo funciona.",
       items: [
-        { title: "Diagnóstico honesto", text: "Te explicamos qué falla y cuáles son las opciones antes de intervenir o de escribir una línea de código." },
+        { title: "Alcance honesto", text: "Antes de escribir una línea de código te explicamos las opciones y qué implica cada una, sin sorpresas." },
         { title: "Confidencialidad", text: "Accedemos solo a lo necesario y no conservamos copias de tus archivos o datos." },
-        { title: "Respuesta ágil", text: "Coordinamos la sesión, la visita o la primera versión en el menor tiempo posible." },
+        { title: "Respuesta ágil", text: "La primera versión llega en el menor tiempo posible, con un link de preview para que la revises." },
         { title: "Atención cercana", text: "Hogares, profesionales y empresas con el mismo nivel de cuidado, en español y en inglés." },
       ],
       imageAlt: "Espacio de trabajo de NSAT Computers",
@@ -152,21 +152,21 @@ export const COPY = {
       kicker: "// nosotros",
       title: "NSAT Computers",
       subtitle:
-        "Equipo de soporte técnico e ingeniería informática con base en Porlamar, Nueva Esparta. Trabajamos con hogares, profesionales y empresas que necesitan resolver problemas tecnológicos sin complicaciones.",
+        "Equipo de desarrollo web e ingeniería informática con base en Porlamar, Nueva Esparta. Trabajamos con hogares, profesionales y empresas que necesitan una presencia en línea que funcione, sin complicaciones.",
       misionTitle: "Misión",
-      mision: "Brindar soporte técnico confiable y accesible, combinando diagnóstico honesto, herramientas actuales y acompañamiento cercano.",
+      mision: "Brindar desarrollo web confiable y accesible, combinando código claro, herramientas actuales y acompañamiento cercano.",
       visionTitle: "Visión",
-      vision: "Ser la referencia local en soporte informático para hogares y pequeñas empresas, reconocida por su transparencia y calidad.",
+      vision: "Ser la referencia local en desarrollo web para hogares y pequeñas empresas, reconocida por su transparencia y calidad.",
       valoresTitle: "Valores",
       valores: "Honestidad, responsabilidad, confidencialidad y respeto por el tiempo y el presupuesto de cada cliente.",
       bullets: [
-        "Diagnóstico claro antes de cobrar.",
+        "Alcance claro antes de empezar.",
         "Cotización por escrito y sin sorpresas.",
         "Confidencialidad sobre archivos y datos.",
-        "Recomendaciones para prevenir futuras fallas.",
-        "Seguimiento después del servicio.",
+        "Buenas prácticas de velocidad y seguridad.",
+        "Seguimiento después de la entrega.",
       ],
-      imageAlt: "Ingeniero trabajando en un equipo",
+      imageAlt: "Ingeniero trabajando en un proyecto web",
     },
     faq: {
       kicker: "// faq",
@@ -177,8 +177,8 @@ export const COPY = {
         { q: "¿El sitio queda en español e inglés?", a: "Sí. Todos los proyectos bilingües se entregan con las dos versiones completas, conmetadatos y URLs propias para cada idioma." },
         { q: "¿Dónde queda hospedado el sitio?", a: "Se despliega en Vercel, con HTTPS, dominio propio y CDN global. Puede ir a tu cuenta o a la nuestra según el plan de soporte." },
         { q: "¿Puedo editar el contenido yo mismo?", a: "Sí. Integramos un CMS o un sistema sencillo para que actualices textos e imágenes sin tocar código, y te dejamos instrucciones al entregar." },
-        { q: "¿Ofrecen soporte después de la entrega?", a: "Sí. Coordinamos cambios, mantenimiento y soporte técnico por WhatsApp, de forma puntual o con plan periódico." },
-        { q: "¿Atienden en remoto y en presencial?", a: "Ambos. El software se resuelve por acceso remoto con tu autorización; las fallas de hardware se coordinan como visita presencial." },
+        { q: "¿Ofrecen soporte después de la entrega?", a: "Sí. Coordinamos cambios, mantenimiento y mejoras por WhatsApp, de forma puntual o con plan periódico." },
+        { q: "¿En qué tecnologías trabajan?", a: "Next.js y React para sitios modernos y rápidos, y WordPress cuando prefieres administrarlo tú mismo. Recomendamos la opción según tu caso." },
       ],
     },
     contact: {
@@ -201,10 +201,10 @@ export const COPY = {
       addressLabel: "Ubicación",
       emailLabel: "Email",
       phoneLabel: "Teléfono",
-      imageAlt: "Técnico de NSAT Computers",
+      imageAlt: "Proyecto web de NSAT Computers",
     },
     footer: {
-      tagline: "Soporte técnico, ensamble de computadoras, mantenimiento preventivo y desarrollo web para hogares y empresas.",
+      tagline: "Desarrollo web, tiendas online, automatización y mantenimiento web para hogares y empresas.",
       linksTitle: "Enlaces",
       legalTitle: "Legal",
       servicesTitle: "Servicios",
@@ -304,9 +304,9 @@ export const COPY = {
 
   en: {
     meta: {
-      title: "Web Development & Tech Support",
+      title: "Web Development",
       description:
-        "NSAT Computers: fast, bilingual, modern websites built with Next.js. Plus remote and on-site tech support in Porlamar, Nueva Esparta.",
+        "NSAT Computers: fast, bilingual, modern websites built with Next.js — stores, portfolios and corporate pages in Porlamar, Nueva Esparta.",
     },
     nav: {
       servicios: "Services",
@@ -322,12 +322,12 @@ export const COPY = {
       close: "Close",
     },
     hero: {
-      badge: "Tech support + Web development",
+      badge: "Custom web development",
       title1: "Your business,",
       title2: "compiled",
       title3: "to grow.",
       subtitle:
-        "We design and build modern, fast, bilingual websites with Next.js — and we keep your machines running with honest tech support. Porlamar, Nueva Esparta.",
+        "We design and build modern, fast, bilingual websites with Next.js: stores, portfolios and pages that convert. Porlamar, Nueva Esparta.",
       ctaPrimary: "Get my quote",
       ctaSecondary: "See the portfolio",
       terminalTitle: "nsat — setup",
@@ -342,9 +342,9 @@ export const COPY = {
     marquee: { label: "Built with" },
     services: {
       kicker: "// services",
-      title: "Everything your technology needs",
+      title: "Everything your website needs",
       subtitle:
-        "From a one-off repair to your company's website. Every job starts with a clear diagnosis and a surprise-free quote.",
+        "From the first idea to the live site. Every project starts with clear scope and a surprise-free quote.",
       items: [
         {
           icon: "globe",
@@ -352,11 +352,11 @@ export const COPY = {
           text: "Modern sites in Next.js and WordPress: stores, portfolios, corporate pages and custom integrations.",
           link: { label: "See details", href: "https://nsatcomputers.infinityfreeapp.com/desarrollo-web/" },
         },
-        { icon: "wrench", title: "Tech Support", text: "Remote and on-site diagnosis for desktops, laptops, printers and peripherals." },
-        { icon: "shield", title: "SMB Maintenance", text: "Periodic plans, backups and guidance to keep your operation running." },
-        { icon: "cpu", title: "PC Components", text: "Processors, SSDs, memory, graphics cards and peripherals with compatibility advice." },
-        { icon: "network", title: "Networks", text: "Local network, Wi-Fi, router and shared resource setup for your office." },
-        { icon: "spark", title: "Automation", text: "Forms, bookings, payments and dashboards that connect your site with your internal processes." },
+        { icon: "cart", title: "Online stores", text: "E-commerce with catalogue, cart, payments and shipping, ready to sell from day one." },
+        { icon: "search", title: "SEO & performance", text: "Speed, technical SEO and structured data so people can find you on Google." },
+        { icon: "cpu", title: "Custom apps", text: "Portals and dashboards with databases, user accounts and secure access for your operation." },
+        { icon: "shield", title: "Web maintenance", text: "Updates, backups and periodic improvements so your site never goes down." },
+        { icon: "spark", title: "Automation", text: "Forms, payments and automated flows that connect your site with your internal processes." },
       ] as ServiceItem[],
       credit: "Photos: Pixabay",
     },
@@ -373,12 +373,12 @@ export const COPY = {
     },
     why: {
       kicker: "// why nsat",
-      title: "Technical work with clear explanations",
-      subtitle: "We believe a good job doesn't end when the machine boots: it ends when you understand what happened.",
+      title: "Clear work, no jargon",
+      subtitle: "We believe a good job doesn't end when the site goes live: it ends when you understand how it works.",
       items: [
-        { title: "Honest diagnosis", text: "We explain what's failing and what your options are before touching anything or writing a single line of code." },
+        { title: "Honest scope", text: "Before writing a single line of code we explain your options and what each one involves, with no surprises." },
         { title: "Confidentiality", text: "We access only what's needed and never keep copies of your files or data." },
-        { title: "Fast response", text: "We schedule the session, the visit or the first version as quickly as possible." },
+        { title: "Fast response", text: "The first version arrives as quickly as possible, with a preview link for you to review." },
         { title: "Close attention", text: "Homes, professionals and businesses get the same level of care, in Spanish and in English." },
       ],
       imageAlt: "NSAT Computers workspace",
@@ -397,21 +397,21 @@ export const COPY = {
       kicker: "// about",
       title: "NSAT Computers",
       subtitle:
-        "A tech support and IT engineering team based in Porlamar, Nueva Esparta. We work with homes, professionals and businesses that need to solve technology problems without the hassle.",
+        "A web development and IT engineering team based in Porlamar, Nueva Esparta. We work with homes, professionals and businesses that need an online presence that works, without the hassle.",
       misionTitle: "Mission",
-      mision: "Provide reliable and accessible tech support, combining honest diagnosis, current tools and close guidance.",
+      mision: "Provide reliable and accessible web development, combining clean code, current tools and close guidance.",
       visionTitle: "Vision",
-      vision: "To be the local reference in IT support for homes and small businesses, recognised for transparency and quality.",
+      vision: "To be the local reference in web development for homes and small businesses, recognised for transparency and quality.",
       valoresTitle: "Values",
       valores: "Honesty, responsibility, confidentiality and respect for every client's time and budget.",
       bullets: [
-        "A clear diagnosis before charging anything.",
+        "Clear scope before we start.",
         "A written quote with no surprises.",
         "Confidentiality over your files and data.",
-        "Advice to prevent future failures.",
-        "Follow-up after the service.",
+        "Solid speed and security practices.",
+        "Follow-up after launch.",
       ],
-      imageAlt: "Engineer working on a machine",
+      imageAlt: "Engineer working on a web project",
     },
     faq: {
       kicker: "// faq",
@@ -422,8 +422,8 @@ export const COPY = {
         { q: "Does the site come in Spanish and English?", a: "Yes. Bilingual projects ship with both complete versions, plus metadata and their own URL for each language." },
         { q: "Where is the site hosted?", a: "It deploys on Vercel with HTTPS, a custom domain and a global CDN. It can live on your account or ours, depending on the support plan." },
         { q: "Can I edit the content myself?", a: "Yes. We integrate a CMS or a simple system so you can update text and images without touching code, and we leave instructions at handover." },
-        { q: "Do you offer support after launch?", a: "Yes. We handle changes, maintenance and tech support over WhatsApp, either ad hoc or on a periodic plan." },
-        { q: "Do you work remotely and on-site?", a: "Both. Software issues are resolved remotely with your authorisation; hardware failures are scheduled as an on-site visit." },
+        { q: "Do you offer support after launch?", a: "Yes. We handle changes, maintenance and improvements over WhatsApp, either ad hoc or on a periodic plan." },
+        { q: "Which technologies do you use?", a: "Next.js and React for modern, fast sites, and WordPress when you'd rather manage it yourself. We recommend the option that fits your case." },
       ],
     },
     contact: {
@@ -446,10 +446,10 @@ export const COPY = {
       addressLabel: "Location",
       emailLabel: "Email",
       phoneLabel: "Phone",
-      imageAlt: "NSAT Computers technician",
+      imageAlt: "NSAT Computers web project",
     },
     footer: {
-      tagline: "Tech support, computer assembly, preventive maintenance and web development for homes and businesses.",
+      tagline: "Web development, online stores, automation and web maintenance for homes and businesses.",
       linksTitle: "Links",
       legalTitle: "Legal",
       servicesTitle: "Services",
