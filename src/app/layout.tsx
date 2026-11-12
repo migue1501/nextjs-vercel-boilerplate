@@ -1,28 +1,39 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { buildMetadata } from "@/lib/seo";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
+const mono = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a", width: "device-width", initialScale: 1,
+  themeColor: "#090e19",
+  width: "device-width",
+  initialScale: 1,
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: "Web que convierte",
-  description: "Sitios rápidos en Next.js desplegados en Vercel.",
+  title: "Desarrollo Web y Soporte Técnico",
+  description:
+    "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js, más soporte técnico en Porlamar, Nueva Esparta.",
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+type Params = Promise<{ lang?: string }>;
+
+export default async function RootLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Params;
+}) {
+  const { lang } = await params;
+  const htmlLang = lang === "en" ? "en" : "es";
+
   return (
-    <html lang="es" className={inter.className}>
+    <html lang={htmlLang} className={`${inter.variable} ${mono.variable}`}>
       <body className="min-h-dvh bg-background text-foreground antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

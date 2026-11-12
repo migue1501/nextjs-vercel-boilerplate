@@ -1,6 +1,11 @@
 import type { MetadataRoute } from "next";
 
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://nsatwebdesign.vercel.app";
+
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
-  return { rules: { userAgent: "*", allow: "/" }, sitemap: `${base}/sitemap.xml` };
+  return {
+    rules: { userAgent: "*", allow: "/" },
+    sitemap: `${BASE}/sitemap.xml`,
+    host: BASE,
+  };
 }
