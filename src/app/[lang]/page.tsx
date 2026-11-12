@@ -7,6 +7,7 @@ import { Why } from "@/components/sections/why";
 import { Faq } from "@/components/sections/faq";
 import { Pricing } from "@/components/sections/pricing";
 import { Contact } from "@/components/sections/contact";
+import { ChatBot } from "@/components/chat/chatbot";
 import { notFound } from "next/navigation";
 import { LANGS, type Lang } from "@/lib/content";
 
@@ -35,6 +36,7 @@ export default async function Landing({ params }: { params: Params }) {
       <Faq lang={l} />
       <Pricing lang={l} />
       <Contact lang={l} />
+      <ChatBot lang={l} />
     </>
   );
 }
