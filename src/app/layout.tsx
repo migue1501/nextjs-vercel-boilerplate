@@ -13,9 +13,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: "Desarrollo Web y Soporte Técnico",
+  title: "Desarrollo Web Profesional",
   description:
-    "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js, más soporte técnico en Porlamar, Nueva Esparta.",
+    "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js — tiendas, portafolios y páginas corporativas en Porlamar, Nueva Esparta.",
 });
 
 type Params = Promise<{ lang?: string }>;

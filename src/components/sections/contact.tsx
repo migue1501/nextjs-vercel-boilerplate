@@ -130,8 +130,8 @@ export function Contact({ lang }: { lang: Lang }) {
 
               <div className="relative mt-auto overflow-hidden rounded-3xl border border-white/10">
                 <Image
-                  src={IMAGES.tecnico.src}
-                  alt={IMAGES.tecnico.alt}
+                  src={IMAGES.ingeniero.src}
+                  alt={IMAGES.ingeniero.alt}
                   width={1280}
                   height={853}
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -140,7 +140,7 @@ export function Contact({ lang }: { lang: Lang }) {
                 <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-nsat-ink via-nsat-ink/35 to-transparent" />
                 <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
                   <span className="font-mono text-[11px] text-slate-300">{SITE.address}</span>
-                  <span className="font-mono text-[10px] text-slate-500">{IMAGES.tecnico.credit}</span>
+                  <span className="font-mono text-[10px] text-slate-500">{IMAGES.ingeniero.credit}</span>
                 </div>
               </div>
             </div>

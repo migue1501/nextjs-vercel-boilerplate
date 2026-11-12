@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { getCopy, SITE, type Lang } from "@/lib/content";
@@ -56,8 +57,14 @@ export function Footer({ lang }: { lang: Lang }) {
           {/* brand */}
           <div>
             <Link href={`/${lang}`} className="flex items-center gap-2.5" aria-label={SITE.name}>
-              <span className="flex size-9 items-center justify-center rounded-xl bg-orange-500 font-mono text-sm font-black text-[#0b1220]">
-                N
+              <span className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15">
+                <Image
+                  src="/images/logo-nsat.png"
+                  alt="NSAT Computers"
+                  width={36}
+                  height={36}
+                  className="size-8 object-contain"
+                />
               </span>
               <span className="leading-none">
                 <span className="block text-[15px] font-bold text-slate-100">NSAT Computers</span>

@@ -11,12 +11,6 @@ const ICONS: Record<string, React.ReactNode> = {
       <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
     </>
   ),
-  wrench: (
-    <>
-      <path d="M14.7 6.3a4 4 0 0 0 5 5l-9.4 9.4a2.1 2.1 0 0 1-3-3Z" />
-      <path d="M14.7 6.3 17.5 3.5a4 4 0 0 1 3 3l-2.8 2.8" />
-    </>
-  ),
   shield: (
     <>
       <path d="M12 3 5 6v6c0 4.4 3 8.3 7 9.4 4-1.1 7-5 7-9.4V6Z" />
@@ -29,18 +23,23 @@ const ICONS: Record<string, React.ReactNode> = {
       <path d="M10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3" />
     </>
   ),
-  network: (
-    <>
-      <circle cx="12" cy="5" r="2.2" />
-      <circle cx="5" cy="19" r="2.2" />
-      <circle cx="19" cy="19" r="2.2" />
-      <path d="M12 7.2v4.3M12 11.5 6.4 17M12 11.5 17.6 17" />
-    </>
-  ),
   spark: (
     <>
       <path d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8" />
       <circle cx="12" cy="12" r="2.6" />
+    </>
+  ),
+  cart: (
+    <>
+      <circle cx="9.5" cy="20" r="1.5" />
+      <circle cx="18" cy="20" r="1.5" />
+      <path d="M2.5 3.5h2.6l2.4 11.3a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.3L21 7H6" />
+    </>
+  ),
+  search: (
+    <>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20.5 20.5-4.2-4.2" />
     </>
   ),
 };

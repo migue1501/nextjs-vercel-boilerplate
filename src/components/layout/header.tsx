@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -46,8 +47,15 @@ export function Header({ lang }: { lang: Lang }) {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:px-6">
         {/* logo */}
         <Link href={`/${lang}`} className="group flex items-center gap-2.5" aria-label={SITE.name}>
-          <span className="flex size-9 items-center justify-center rounded-xl bg-orange-500 font-mono text-sm font-black text-[#0b1220] transition-transform duration-300 group-hover:rotate-[-8deg]">
-            N
+          <span className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15 transition-transform duration-300 group-hover:rotate-[-8deg]">
+            <Image
+              src="/images/logo-nsat.png"
+              alt="NSAT Computers"
+              width={36}
+              height={36}
+              priority
+              className="size-8 object-contain"
+            />
           </span>
           <span className="leading-none">
             <span className="block text-[15px] font-bold tracking-tight text-slate-100">
