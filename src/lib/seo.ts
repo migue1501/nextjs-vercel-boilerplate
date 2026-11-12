@@ -5,25 +5,43 @@ type SeoInput = {
   description: string;
   path?: string;
   image?: string;
+  locale?: string;
+  alternates?: { language?: Record<string, string> };
 };
 
-export function buildMetadata({ title, description, path = "/", image = "/og.png" }: SeoInput): Metadata {
-  const url = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+const DEFAULT_URL = "https://nsatwebdesign.vercel.app";
+
+export function buildMetadata({
+  title,
+  description,
+  path = "/",
+  image = "/og.png",
+  locale = "es_ES",
+  alternates,
+}: SeoInput): Metadata {
+  const url = process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_URL;
+  const canonical = `${url}${path}`;
+
   return {
     metadataBase: new URL(url),
-    title: `${title} | Tu Marca`,
+    title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical, ...(alternates ? { languages: alternates.language } : {}) },
     openGraph: {
       title,
       description,
-      url: `${url}${path}`,
-      siteName: "Tu Marca",
-      images: [{ url: image, width: 1200, height: 630 }],
+      url: canonical,
+      siteName: "NSAT Computers",
+      images: [{ url: `${url}${image}`, width: 1200, height: 630 }],
       type: "website",
-      locale: "es_ES",
+      locale,
     },
-    twitter: { card: "summary_large_image", title, description, images: [image] },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${url}${image}`],
+    },
     robots: { index: true, follow: true },
   };
 }
