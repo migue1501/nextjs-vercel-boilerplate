@@ -57,13 +57,19 @@ export function Footer({ lang }: { lang: Lang }) {
           {/* brand */}
           <div>
             <Link href={lang === "es" ? "/" : `/${lang}`} className="flex items-center gap-2.5" aria-label={SITE.name}>
-              <span className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15">
+              <span
+                className="flex size-10 items-center justify-center overflow-hidden rounded-xl"
+                style={{
+                  WebkitMaskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
+                  maskImage: "radial-gradient(closest-side, black 72%, transparent 100%)",
+                }}
+              >
                 <Image
-                  src="/images/logo-nsat.png"
+                  src="/images/logo-nsat.webp"
                   alt="NSAT Computers"
-                  width={36}
-                  height={36}
-                  className="size-8 object-contain"
+                  width={40}
+                  height={40}
+                  className="size-10 object-cover"
                 />
               </span>
               <span className="leading-none">
