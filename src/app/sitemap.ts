@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 1,
     alternates: {
-      languages: { es: `${BASE}/es`, en: `${BASE}/en` },
+      languages: { es: `${BASE}/`, en: `${BASE}/en`, "x-default": `${BASE}/` },
     },
   }));
 
@@ -22,7 +22,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly" as const,
     priority: 0.4,
     alternates: {
-      languages: { es: `${BASE}/es/privacidad`, en: `${BASE}/en/privacidad` },
+      languages: {
+        es: `${BASE}/es/privacidad`,
+        en: `${BASE}/en/privacidad`,
+        "x-default": `${BASE}/es/privacidad`,
+      },
     },
   }));
 

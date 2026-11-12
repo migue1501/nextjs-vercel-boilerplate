@@ -46,7 +46,7 @@ export function Header({ lang }: { lang: Lang }) {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 sm:px-6">
         {/* logo */}
-        <Link href={`/${lang}`} className="group flex items-center gap-2.5" aria-label={SITE.name}>
+        <Link href={lang === "es" ? "/" : `/${lang}`} className="group flex items-center gap-2.5" aria-label={SITE.name}>
           <span className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15 transition-transform duration-300 group-hover:rotate-[-8deg]">
             <Image
               src="/images/logo-nsat.png"
@@ -84,7 +84,7 @@ export function Header({ lang }: { lang: Lang }) {
         <div className="flex items-center gap-2">
           {/* language switch */}
           <Link
-            href={`/${other}`}
+            href={other === "es" ? "/" : `/${other}`}
             hrefLang={other}
             className="flex size-9 items-center justify-center rounded-lg border border-white/14 font-mono text-[11.5px] font-bold text-slate-300 transition-all hover:border-orange-500/60 hover:text-orange-400 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:outline-none"
             aria-label={t.nav.langLabel}
