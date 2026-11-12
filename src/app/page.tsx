@@ -7,6 +7,7 @@ import { Process } from "@/components/sections/process";
 import { Portfolio } from "@/components/sections/portfolio";
 import { Why } from "@/components/sections/why";
 import { Faq } from "@/components/sections/faq";
+import { Pricing } from "@/components/sections/pricing";
 import { Contact } from "@/components/sections/contact";
 
 // The root serves the Spanish home directly (no redirect): `/` IS the
@@ -25,6 +26,7 @@ export default function Home() {
         <Portfolio lang="es" />
         <Why lang="es" />
         <Faq lang="es" />
+        <Pricing lang="es" />
         <Contact lang="es" />
       </main>
       <Footer lang="es" />

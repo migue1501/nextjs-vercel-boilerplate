@@ -5,6 +5,7 @@ import { Process } from "@/components/sections/process";
 import { Portfolio } from "@/components/sections/portfolio";
 import { Why } from "@/components/sections/why";
 import { Faq } from "@/components/sections/faq";
+import { Pricing } from "@/components/sections/pricing";
 import { Contact } from "@/components/sections/contact";
 import { notFound } from "next/navigation";
 import { LANGS, type Lang } from "@/lib/content";
@@ -32,6 +33,7 @@ export default async function Landing({ params }: { params: Params }) {
       <Portfolio lang={l} />
       <Why lang={l} />
       <Faq lang={l} />
+      <Pricing lang={l} />
       <Contact lang={l} />
     </>
   );
