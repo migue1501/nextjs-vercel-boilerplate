@@ -26,10 +26,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  const external = [
-    { url: "https://nsat-portfolio.vercel.app", priority: 0.8 },
-    { url: "https://nsatcomputers.infinityfreeapp.com", priority: 0.7 },
-  ].map((e) => ({ ...e, lastModified: now, changeFrequency: "monthly" as const }));
-
-  return [...home, ...privacy, ...external];
+  return [...home, ...privacy];
 }
