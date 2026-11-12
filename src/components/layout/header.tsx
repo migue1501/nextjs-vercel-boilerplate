@@ -54,6 +54,7 @@ export function Header({ lang }: { lang: Lang }) {
               width={36}
               height={36}
               priority
+              loading="eager"
               className="size-8 object-contain"
             />
           </span>
