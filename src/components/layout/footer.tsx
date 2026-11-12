@@ -56,7 +56,7 @@ export function Footer({ lang }: { lang: Lang }) {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           {/* brand */}
           <div>
-            <Link href={`/${lang}`} className="flex items-center gap-2.5" aria-label={SITE.name}>
+            <Link href={lang === "es" ? "/" : `/${lang}`} className="flex items-center gap-2.5" aria-label={SITE.name}>
               <span className="flex size-9 items-center justify-center overflow-hidden rounded-xl bg-white ring-1 ring-white/15">
                 <Image
                   src="/images/logo-nsat.png"
@@ -122,7 +122,7 @@ export function Footer({ lang }: { lang: Lang }) {
             </h3>
             <ul className="mt-4 space-y-2.5">
               <li>
-                <Link href={`/${lang === "es" ? "en" : "es"}`} className="text-sm text-slate-500 transition-colors hover:text-orange-400">
+                <Link href={lang === "es" ? "/en" : "/"} className="text-sm text-slate-500 transition-colors hover:text-orange-400">
                   {t.footer.langLink}
                 </Link>
               </li>

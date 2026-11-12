@@ -24,7 +24,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     description: t.privacy.lead,
     path: `/${lang}/privacidad`,
     locale: lang === "es" ? "es_ES" : "en_US",
-    alternates: { language: { es: "/es/privacidad", en: "/en/privacidad" } },
+    alternates: {
+      language: { es: "/es/privacidad", en: "/en/privacidad", "x-default": "/es/privacidad" },
+    },
   });
 }
 
@@ -46,7 +48,7 @@ export default async function Privacy({ params }: { params: Params }) {
       <div className="relative mx-auto max-w-3xl px-5 sm:px-6">
         {/* breadcrumb */}
         <nav aria-label="breadcrumb" className="font-mono text-[11.5px] text-slate-500">
-          <Link href={`/${l}`} className="transition-colors hover:text-orange-400">
+          <Link href={l === "es" ? "/" : `/${l}`} className="transition-colors hover:text-orange-400">
             ~/nsat
           </Link>
           <span className="mx-2 text-slate-700">/</span>
@@ -147,7 +149,7 @@ export default async function Privacy({ params }: { params: Params }) {
         <Reveal delay={0.05}>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              href={`/${l}`}
+              href={l === "es" ? "/" : `/${l}`}
               className="inline-flex items-center gap-2 rounded-full bg-orange-500 px-6 py-3.5 text-sm font-semibold text-[#0b1220] transition-all hover:bg-orange-400 focus-visible:ring-2 focus-visible:ring-orange-300 focus-visible:outline-none"
             >
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

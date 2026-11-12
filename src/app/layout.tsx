@@ -16,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Desarrollo Web Profesional",
   description:
     "NSAT Computers: sitios web rápidos, bilingües y modernos en Next.js — tiendas, portafolios y páginas corporativas en Porlamar, Nueva Esparta.",
+  alternates: { language: { es: "/", en: "/en", "x-default": "/" } },
 });
 
 type Params = Promise<{ lang?: string }>;

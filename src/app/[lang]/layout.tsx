@@ -28,7 +28,7 @@ export async function generateMetadata({
     description: t.meta.description,
     path,
     locale: lang === "es" ? "es_ES" : "en_US",
-    alternates: { language: { es: "/es", en: "/en" } },
+    alternates: { language: { es: "/", en: "/en", "x-default": "/" } },
   });
 }
 
