@@ -43,5 +43,8 @@ export function buildMetadata({
       images: [`${url}${image}`],
     },
     robots: { index: true, follow: true },
+    verification: {
+      google: "p4jW6ivU_ASPv5iOq4Y5XLdXVDIbnPJ3gSjXUCIuAe8",
+    },
   };
 }
