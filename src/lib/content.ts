@@ -246,6 +246,55 @@ export const COPY = {
         "Precios en dólares (USD), desde. Dominio, hosting e IVA no incluidos. La cotización final depende del alcance de cada proyecto.",
       cta: "Cotizar mi proyecto",
     },
+    chat: {
+      teaser:
+        "Hola 👋 ¿En qué puedo ayudarte hoy? ¿Quieres saber los precios o cuánto cuesta una página web?",
+      teaserCta: "Toca para chatear →",
+      greet: "¡Hola! 👋 Soy el asistente de NSAT Web Design. Elige una opción o escribe tu pregunta.",
+      placeholder: "Escribe tu mensaje…",
+      send: "Enviar",
+      close: "Cerrar chat",
+      launch: "Abrir chat de NSAT Web Design",
+      sub: "Respuesta inmediata",
+      quick: [
+        { id: "precios", label: "Ver precios" },
+        { id: "servicios", label: "Servicios" },
+        { id: "portafolio", label: "Portafolio" },
+        { id: "contacto", label: "Hablar con un humano" },
+      ],
+      answers: {
+        precios: {
+          text: "Así empiezan nuestros precios: Landing page desde $199, Página web desde $349, Tienda WooCommerce desde $599 y Tienda elaborada desde $999. Cada proyecto es distinto y antes de empezar recibes tu cotización por escrito.",
+          link: { href: "#precios", label: "Ver la sección de precios ↓", external: false },
+        },
+        servicios: {
+          text: "Hacemos landings, páginas corporativas y tiendas online en WooCommerce: diseño a medida, en español e inglés, optimizadas para celular y listas para aparecer en Google.",
+          link: { href: "#servicios", label: "Ver servicios ↓", external: false },
+        },
+        portafolio: {
+          text: "Puedes ver demos reales que ya corren en producción en nuestro portafolio.",
+          link: { href: "https://nsat-portfolio.vercel.app", label: "Ver portafolio ↗", external: true },
+        },
+        contacto: {
+          text: "Con gusto te atiende una persona real. Escríbenos por WhatsApp y respondemos lo antes posible (lunes a sábado).",
+          link: {
+            href: `${SITE.whatsapp}?text=${encodeURIComponent("Hola 👋 Vengo del chat de nsatwebdesign.vercel.app. Quiero una cotización para mi proyecto web.")}`,
+            label: "Abrir WhatsApp ↗",
+            external: true,
+          },
+        },
+        default: {
+          text: "No estoy seguro de entender 😅. Prueba con una de estas opciones:",
+          showQuick: true,
+        },
+      },
+      keywords: [
+        { id: "precios", words: ["precio", "precios", "cuánto", "cuanto", "costo", "coste", "cotización", "cotizacion", "presupuesto", "cuesta", "sale", "barato"] },
+        { id: "servicios", words: ["servicio", "servicios", "página", "pagina", "web", "sitio", "desarrollo", "tienda", "woo", "landing"] },
+        { id: "portafolio", words: ["portafolio", "portfolio", "demos", "demo", "trabajos", "proyectos"] },
+        { id: "contacto", words: ["contacto", "whatsapp", "humano", "persona", "hablar", "teléfono", "telefono", "ayuda"] },
+      ],
+    },
     contact: {
       kicker: "// contacto",
       title: "¿Empezamos tu proyecto?",
@@ -555,6 +604,55 @@ export const COPY = {
       note:
         "Prices in US dollars (USD), starting from. Domain, hosting and taxes not included. The final quote depends on each project's scope.",
       cta: "Get my quote",
+    },
+    chat: {
+      teaser:
+        "Hi 👋 How can I help you today? Would you like to know the pricing or how much a website costs?",
+      teaserCta: "Tap to chat →",
+      greet: "Hi! 👋 I'm the NSAT Web Design assistant. Pick an option or type your question.",
+      placeholder: "Type your message…",
+      send: "Send",
+      close: "Close chat",
+      launch: "Open NSAT Web Design chat",
+      sub: "Instant replies",
+      quick: [
+        { id: "precios", label: "See pricing" },
+        { id: "servicios", label: "Services" },
+        { id: "portafolio", label: "Portfolio" },
+        { id: "contacto", label: "Talk to a human" },
+      ],
+      answers: {
+        precios: {
+          text: "Here's where our pricing starts: Landing page from $199, Business website from $349, WooCommerce store from $599 and Custom store from $999. Every project is different and you get a written quote before we start.",
+          link: { href: "#precios", label: "See pricing section ↓", external: false },
+        },
+        servicios: {
+          text: "We build landing pages, corporate sites and WooCommerce online stores: custom design, in Spanish and English, optimized for mobile and ready to rank on Google.",
+          link: { href: "#servicios", label: "See services ↓", external: false },
+        },
+        portafolio: {
+          text: "You can see real demos already running in production on our portfolio.",
+          link: { href: "https://nsat-portfolio.vercel.app", label: "View portfolio ↗", external: true },
+        },
+        contacto: {
+          text: "A real person will be happy to help. Message us on WhatsApp and we reply as soon as possible (Monday to Saturday).",
+          link: {
+            href: `${SITE.whatsapp}?text=${encodeURIComponent("Hi 👋 I came from the nsatwebdesign.vercel.app chat. I'd like a quote for my web project.")}`,
+            label: "Open WhatsApp ↗",
+            external: true,
+          },
+        },
+        default: {
+          text: "Not sure I understand 😅. Try one of these options:",
+          showQuick: true,
+        },
+      },
+      keywords: [
+        { id: "precios", words: ["price", "pricing", "how much", "cost", "quote", "budget", "charge", "cheap"] },
+        { id: "servicios", words: ["service", "services", "website", "web", "page", "site", "development", "store", "woo", "landing"] },
+        { id: "portafolio", words: ["portfolio", "demos", "demo", "work", "projects"] },
+        { id: "contacto", words: ["contact", "whatsapp", "human", "person", "talk", "phone", "help"] },
+      ],
     },
     contact: {
       kicker: "// contact",

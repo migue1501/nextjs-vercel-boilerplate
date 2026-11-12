@@ -9,6 +9,7 @@ import { Why } from "@/components/sections/why";
 import { Faq } from "@/components/sections/faq";
 import { Pricing } from "@/components/sections/pricing";
 import { Contact } from "@/components/sections/contact";
+import { ChatBot } from "@/components/chat/chatbot";
 
 // The root serves the Spanish home directly (no redirect): `/` IS the
 // canonical ES URL, so it renders the full landing instead of hopping to /es.
@@ -30,6 +31,7 @@ export default function Home() {
         <Contact lang="es" />
       </main>
       <Footer lang="es" />
+      <ChatBot lang="es" />
     </>
   );
 }
