@@ -30,5 +30,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  return [...home, ...privacy];
+  const promo = langs.map((lang) => ({
+    url: `${BASE}/${lang}/promo`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+    alternates: {
+      languages: {
+        es: `${BASE}/es/promo`,
+        en: `${BASE}/en/promo`,
+        "x-default": `${BASE}/es/promo`,
+      },
+    },
+  }));
+
+  return [...home, ...privacy, ...promo];
 }
