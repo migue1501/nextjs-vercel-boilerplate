@@ -19,14 +19,23 @@ export const promoConfig = {
     landingWithDomain: "$199",
     brandPack: "$79",
   },
-  closeDate: "2026-11-20",
-  spotsTotal: 5,
+  /** Último día de vigencia (inclusive). La promo se desactiva automáticamente el 1 de enero. */
+  closeDate: "2026-12-31",
+  /** Fecha/hora a partir de la cual la promo se considera inactiva (auto). */
+  disableAt: "2027-01-01T00:00:00",
+  spotsTotal: 6,
 } as const;
 
-export function isPromoEnabled(): boolean {
+export function isPromoActive(now: Date = new Date()): boolean {
   if (process.env.PROMO_ENABLED === "false") return false;
+  if (now >= new Date(promoConfig.disableAt)) return false;
   if (process.env.PROMO_ENABLED === "true") return true;
   return promoConfig.enabled;
+}
+
+/** @deprecated Usa isPromoActive para respetar la fecha de expiración automática. */
+export function isPromoEnabled(): boolean {
+  return isPromoActive();
 }
 
 export type PromoCopy = {
@@ -66,8 +75,8 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     highlights: [
       { label: "Precio promo", value: "$149" },
       { label: "Entrega", value: "72 horas" },
-      { label: "Cupos", value: "5" },
-      { label: "Cierre", value: "Vie 20/11/2026" },
+      { label: "Cupos", value: "6" },
+      { label: "Vigencia", value: "Todo diciembre" },
     ],
     includesTitle: "Qué incluye",
     includes: [
@@ -80,12 +89,12 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     ],
     termsTitle: "Detalles de la promo",
     terms: [
-      "Landing Express en promoción: $149 USD (antes $199) con hosting + subdominio gratis.",
-      "Si quieres tu dominio .com propio: $199 USD (incluye dominio .com primer año + hosting).",
-      "Solo 5 cupos. Cuando se acaban, vuelve al precio regular.",
-      "Promo válida hasta el viernes 20 de noviembre de 2026 (o hasta agotar cupos).",
-      "Pack Marca opcional: +$79 (logo, colores, tipografías y piezas básicas).",
-      "Precio cerrado, sin sorpresas.",
+      "Landing Express en promoción: $149 USD (antes $199) con hosting + subdominio gratis (Vercel).",
+      "Si quieres tu dominio propio: $199 USD incluye dominio .com estándar (1er año, sujeto a disponibilidad y precio del dominio) + hosting de la landing por 1 año. Dominios premium u otras extensiones se cotizan aparte según su costo.",
+      "6 cupos de entrega en diciembre (calculados según ventanas de 72 h con margen por agenda/cortes eléctricos). Sujeto a disponibilidad de agenda; al completarse, vuelve al precio regular.",
+      "Promo extendida durante todo diciembre de 2026. Se desactiva automáticamente el 1 de enero de 2027 (o antes si se completan los cupos).",
+      "Alcance base: 1 landing page con secciones acordadas, entrega estimada en 72 horas según disponibilidad/material entregado y 1 ronda de ajustes razonables. Funciones extra, copy, integraciones o cambios mayores se cotizan aparte.",
+      "El hosting incluido cubre la publicación de la landing; renovaciones de dominio/hosting y servicios adicionales se coordinan según el caso. Precio cerrado según alcance acordado, sin sorpresas.",
     ],
     priceNote:
       "Precios en USD. El dominio .com (si aplica) y renovaciones futuras se coordinan según el caso. Oferta sujeta a disponibilidad de cupos.",
@@ -107,8 +116,8 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     highlights: [
       { label: "Promo price", value: "$149" },
       { label: "Delivery", value: "72 hours" },
-      { label: "Spots", value: "5" },
-      { label: "Ends", value: "Fri Nov 20, 2026" },
+      { label: "Spots", value: "6" },
+      { label: "Valid", value: "All December" },
     ],
     includesTitle: "What's included",
     includes: [
@@ -121,12 +130,12 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     ],
     termsTitle: "Promo details",
     terms: [
-      "Landing Express promo: $149 USD (was $199) with hosting + free subdomain.",
-      "Want your own .com domain: $199 USD (includes first-year .com domain + hosting).",
-      "Only 5 spots. When they're gone, regular price applies.",
-      "Valid until Friday, November 20, 2026 (or while spots last).",
-      "Optional Brand Pack: +$79 (logo, colors, typography and basic assets).",
-      "Fixed price, no surprises.",
+      "Landing Express promo: $149 USD (was $199) with hosting + free subdomain (Vercel).",
+      "Want your own domain: $199 USD includes a standard .com domain (1st year, subject to availability and domain price) + 1 year of landing hosting. Premium domains or other TLDs are quoted separately based on cost.",
+      "6 delivery spots in December (based on 72-hour delivery windows with a buffer for schedule/power outages). Subject to availability; once filled, regular pricing applies.",
+      "Promo extended through all December 2026. It automatically deactivates on January 1, 2027 (or sooner if spots are filled).",
+      "Base scope: 1 landing page with agreed sections, estimated 72-hour delivery depending on availability/provided materials, and 1 round of reasonable revisions. Extra features, copy, integrations, or major changes are quoted separately.",
+      "Included hosting covers publishing the landing; domain/hosting renewals and additional services are handled as agreed. Fixed price for the agreed scope, no surprises.",
     ],
     priceNote:
       "Prices in USD. .com domain (if applicable) and future renewals are handled as agreed. Offer subject to availability.",
