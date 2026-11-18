@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { buildMetadata } from "@/lib/seo";
+import { Snowfall } from "@/components/effects/snowfall";
+import { PromoPopup } from "@/components/promo/promo-popup";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" });
 const mono = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-mono" });
@@ -35,6 +37,8 @@ export default async function RootLayout({
     <html lang={htmlLang} className={`${inter.variable} ${mono.variable}`}>
       <body className="min-h-dvh bg-background text-foreground antialiased">
         {children}
+        <Snowfall />
+        <PromoPopup />
       </body>
     </html>
   );

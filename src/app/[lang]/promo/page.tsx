@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { connection } from "next/server";
 import { Reveal, Stagger, Item } from "@/components/motion/reveal";
 import { getCopy, LANGS, SITE, type Lang } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
-import { PROMO_COPY, getPromoWhatsAppLink, isPromoEnabled, promoConfig } from "@/config/promo";
+import { PROMO_COPY, getPromoWhatsAppLink, isPromoActive, promoConfig } from "@/config/promo";
 
 // Promo content is controlled in src/config/promo.ts (enabled + copy).
 // Update the config and redeploy to activate/deactivate or edit future promos.
@@ -18,9 +19,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { lang } = await params;
   if (!LANGS.includes(lang as Lang)) return {};
+  await connection();
   const l = lang as Lang;
   const c = PROMO_COPY[l];
-  const enabled = isPromoEnabled();
+  const enabled = isPromoActive();
   const path = `/${l}/promo`;
   return buildMetadata({
     title: enabled ? c.metaTitle : c.disabledTitle,
@@ -36,10 +38,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 export default async function PromoPage({ params }: { params: Params }) {
   const { lang } = await params;
   if (!LANGS.includes(lang as Lang)) notFound();
+  await connection();
   const l = lang as Lang;
   const t = getCopy(l);
   const c = PROMO_COPY[l];
-  const enabled = isPromoEnabled();
+  const enabled = isPromoActive();
   const wa = getPromoWhatsAppLink(l);
   const homeHref = l === "es" ? "/" : `/${l}`;
 
@@ -110,7 +113,7 @@ export default async function PromoPage({ params }: { params: Params }) {
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
           <Reveal>
             <p className="inline-flex rounded-full border border-orange-500/35 bg-orange-500/10 px-4 py-1.5 font-mono text-xs tracking-[0.16em] text-orange-300 uppercase">
-              {c.badge} · {l === "es" ? "hasta vie 20/11/2026" : "until Fri Nov 20, 2026"}
+              {c.badge} · {l === "es" ? "todo diciembre 2026" : "all December 2026"}
             </p>
             <h1 className="mt-5 text-[clamp(2.2rem,5.2vw,3.8rem)] leading-[1.04] font-bold tracking-tight text-slate-100">
               <span className="text-gradient">{c.title}</span>
