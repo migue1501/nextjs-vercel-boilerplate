@@ -75,7 +75,7 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     highlights: [
       { label: "Precio promo", value: "$149" },
       { label: "Entrega", value: "72 horas" },
-      { label: "Cupos", value: "6" },
+      { label: "Cupos prioritarios", value: "6" },
       { label: "Vigencia", value: "Todo diciembre" },
     ],
     includesTitle: "Qué incluye",
@@ -91,8 +91,8 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     terms: [
       "Landing Express en promoción: $149 USD (antes $199) con hosting + subdominio gratis (Vercel).",
       "Si quieres tu dominio propio: $199 USD incluye dominio .com estándar (1er año, sujeto a disponibilidad y precio del dominio) + hosting de la landing por 1 año. Dominios premium u otras extensiones se cotizan aparte según su costo.",
-      "6 cupos de entrega en diciembre (calculados según ventanas de 72 h con margen por agenda/cortes eléctricos). Sujeto a disponibilidad de agenda; al completarse, vuelve al precio regular.",
-      "Promo extendida durante todo diciembre de 2026. Se desactiva automáticamente el 1 de enero de 2027 (o antes si se completan los cupos).",
+      "Los primeros 6 proyectos tienen prioridad de entrega en 72 horas. La promo está activa todo diciembre y, si la agenda lo permite, podremos tomar solicitudes adicionales.",
+      "Promo extendida durante todo diciembre de 2026. Se desactiva automáticamente el 1 de enero de 2027.",
       "Alcance base: 1 landing page con secciones acordadas, entrega estimada en 72 horas según disponibilidad/material entregado y 1 ronda de ajustes razonables. Funciones extra, copy, integraciones o cambios mayores se cotizan aparte.",
       "El hosting incluido cubre la publicación de la landing; renovaciones de dominio/hosting y servicios adicionales se coordinan según el caso. Precio cerrado según alcance acordado, sin sorpresas.",
     ],
@@ -116,7 +116,7 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     highlights: [
       { label: "Promo price", value: "$149" },
       { label: "Delivery", value: "72 hours" },
-      { label: "Spots", value: "6" },
+      { label: "Priority spots", value: "6" },
       { label: "Valid", value: "All December" },
     ],
     includesTitle: "What's included",
@@ -132,8 +132,8 @@ export const PROMO_COPY: Record<Lang, PromoCopy> = {
     terms: [
       "Landing Express promo: $149 USD (was $199) with hosting + free subdomain (Vercel).",
       "Want your own domain: $199 USD includes a standard .com domain (1st year, subject to availability and domain price) + 1 year of landing hosting. Premium domains or other TLDs are quoted separately based on cost.",
-      "6 delivery spots in December (based on 72-hour delivery windows with a buffer for schedule/power outages). Subject to availability; once filled, regular pricing applies.",
-      "Promo extended through all December 2026. It automatically deactivates on January 1, 2027 (or sooner if spots are filled).",
+      "The first 6 projects get priority 72-hour delivery. The promo runs all December and, if schedule allows, we can take additional requests.",
+      "Promo extended through all December 2026. It automatically deactivates on January 1, 2027.",
       "Base scope: 1 landing page with agreed sections, estimated 72-hour delivery depending on availability/provided materials, and 1 round of reasonable revisions. Extra features, copy, integrations, or major changes are quoted separately.",
       "Included hosting covers publishing the landing; domain/hosting renewals and additional services are handled as agreed. Fixed price for the agreed scope, no surprises.",
     ],
